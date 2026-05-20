@@ -7,7 +7,7 @@
     }
 
     /* hero */
-    .hero h1 {
+    .titulo-prinipal h1 {
         font-size: 130px;
     }
 
@@ -52,15 +52,15 @@
     }
 
     /* hero */
-    .hero {
+    .titulo-principal {
         height: 85vh;
     }
 
-    .hero span {
+    .titulo-principal span {
         font-size: 40px;
     }
 
-    .hero h1 {
+    .titulo-principal h1 {
         font-size: 160px;
     }
 
@@ -88,7 +88,7 @@
     }
 
     /* cita */
-    .cita blockquote {
+    .frase-index {
         font-size: 1.6rem;
     }
 
