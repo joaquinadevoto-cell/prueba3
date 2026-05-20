@@ -1,266 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* ── TABLET (600px+) ── */
+@media (min-width: 600px) {
 
-:root {
-    --rojo: #c62828;
-    --beige: #e1decd;
-    --gris-fondo: #50464a;
-    --blanco: #f0efeb;
-    --vinotinto: #370F1D;
-    --beige-caja: #d3c2a7;
-    --max-width: 1200px;
-    --radius: 25px;
+    /* nav */
+    nav ul {
+        gap: 20px;
+    }
+
+    /* hero */
+    .hero h1 {
+        font-size: 130px;
+    }
+
+    /* intro */
+    .intro figure {
+        grid-template-rows: 200px 200px;
+    }
+
+    /* destinos */
+    .destinos ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* newsletter */
+    .newsletter form {
+        flex-direction: row;
+        max-width: 500px;
+        margin: 20px auto 0;
+    }
+
+    .newsletter input {
+        flex: 1;
+    }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ── DESKTOP (1024px+) ── */
+@media (min-width: 1024px) {
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--beige);
-    line-height: 1.4;
-    overflow-x: hidden;
-}
+    /* nav */
+    header img {
+        height: 50px;
+    }
 
-.container {
-    width: 100%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    nav ul {
+        gap: 30px;
+    }
 
-/* header y nav */
+    nav a {
+        font-size: 13px;
+    }
 
-header {
-    padding: 10px 0;
-    background-color: var(--beige);
-}
+    /* hero */
+    .hero {
+        height: 85vh;
+    }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .hero span {
+        font-size: 40px;
+    }
 
-header img {
-    height: 40px;
-    width: auto;
-    display: block;
-}
+    .hero h1 {
+        font-size: 160px;
+    }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 12px;
-}
+    /* intro: texto a la izquierda, mosaico a la derecha */
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        padding: 60px 20px;
+    }
 
-nav a {
-    text-decoration: none;
-    color: var(--vinotinto);
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: 700;
-}
+    .intro figure {
+        grid-template-rows: 200px 200px;
+        margin-top: 0;
+    }
 
-nav a.active {
-    color: var(--rojo);
-    border-bottom: 2px solid var(--rojo);
-}
+    /* destinos: 3 columnas */
+    .destinos ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-/* hero */
+    .destinos {
+        padding: 40px 20px;
+    }
 
-.hero {
-    height: 70vh;
-    background: url('img/fuji-01.png') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 0 0 40px 5%;
-    margin-bottom: 30px;
-}
+    /* cita */
+    .cita blockquote {
+        font-size: 1.6rem;
+    }
 
-.hero span {
-    color: var(--vinotinto);
-    font-size: 30px;
-}
+    /* definicion */
+    .definicion h3 {
+        font-size: 2.8rem;
+    }
 
-.hero h1 {
-    color: var(--rojo);
-    font-size: 100px;
-    font-weight: 800;
-    line-height: 0.8;
-}
-
-/* intro */
-
-.intro {
-    padding: 30px 20px;
-}
-
-.intro p {
-    font-size: 1rem;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.intro figure {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.intro figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius);
-}
-
-.intro figure img:first-child {
-    grid-row: span 2;
-}
-
-/* destinos */
-
-.destinos {
-    background-color: var(--gris-fondo);
-    color: white;
-    padding: 15px 20px;
-}
-
-.destinos h2 {
-    font-weight: 900;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.destinos ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.destinos li img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: var(--radius);
-}
-
-.destinos li h3 {
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-/* cita */
-
-.cita {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.cita blockquote {
-    font-size: 1.3rem;
-    font-weight: 700;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
-/* definicion */
-
-.definicion {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.definicion h3 {
-    background-color: var(--beige-caja);
-    padding: 20px;
-    border-radius: var(--radius);
-    margin-top: 20px;
-    color: var(--rojo);
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-/* newsletter */
-
-.newsletter {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('img/kiyomizudera.jpeg') center/cover no-repeat;
-    padding: 70px 20px;
-    text-align: center;
-    color: white;
-}
-
-.newsletter form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.newsletter input {
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-}
-
-.newsletter button {
-    background-color: var(--vinotinto);
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 800;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-/* footer */
-
-footer {
-    background-color: var(--vinotinto);
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-footer h3 {
-    font-size: 2rem;
-    letter-spacing: 3px;
-    margin: 15px 0;
-}
-
-footer nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    margin: 20px 0;
-}
-
-footer nav a {
-    color: white;
-    font-size: 11px;
-}
-
-footer > div > a:first-child {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+    /* newsletter */
+    .newsletter form {
+        max-width: 600px;
+    }
 }
