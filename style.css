@@ -1,29 +1,24 @@
 /* ── TABLET (600px+) ── */
 @media (min-width: 600px) {
 
-    /* nav */
     nav ul {
         gap: 20px;
     }
 
-    /* hero */
-    .titulo-prinipal h1 {
+    .titulo-principal h1 {
         font-size: 130px;
     }
 
-    /* intro */
     .intro figure {
         grid-template-rows: 200px 200px;
     }
 
-    /* destinos */
     .destinos ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
 
-    /* newsletter */
     .newsletter form {
         flex-direction: row;
         max-width: 500px;
@@ -38,7 +33,6 @@
 /* ── DESKTOP (1024px+) ── */
 @media (min-width: 1024px) {
 
-    /* nav */
     header img {
         height: 50px;
     }
@@ -51,7 +45,6 @@
         font-size: 13px;
     }
 
-    /* hero */
     .titulo-principal {
         height: 85vh;
     }
@@ -64,21 +57,27 @@
         font-size: 160px;
     }
 
-    /* intro: texto a la izquierda, mosaico a la derecha */
+    /* intro: párrafos izquierda, figura derecha */
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         gap: 40px;
         align-items: center;
         padding: 60px 20px;
     }
 
+    .intro p {
+        grid-column: 1;
+    }
+
     .intro figure {
+        grid-column: 2;
+        grid-row: 1 / 4;
         grid-template-rows: 200px 200px;
         margin-top: 0;
     }
 
-    /* destinos: 3 columnas */
     .destinos ul {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -87,17 +86,14 @@
         padding: 40px 20px;
     }
 
-    /* cita */
-    .frase-index {
+    .frase-index blockquote {
         font-size: 1.6rem;
     }
 
-    /* definicion */
     .definicion h3 {
         font-size: 2.8rem;
     }
 
-    /* newsletter */
     .newsletter form {
         max-width: 600px;
     }
