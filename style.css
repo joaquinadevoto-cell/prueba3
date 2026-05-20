@@ -101,13 +101,13 @@ nav a.active {
     padding: 30px 20px;
 }
 
-.intro p {
+.intro-texto p {
     font-size: 1rem;
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
-.intro figure {
+.intro-fotos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 150px;
@@ -115,14 +115,14 @@ nav a.active {
     margin-top: 20px;
 }
 
-.intro figure img {
+.intro-fotos img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: var(--radius);
 }
 
-.intro figure img:first-child {
+.intro-fotos img:first-child {
     grid-row: span 2;
 }
 
@@ -161,21 +161,6 @@ nav a.active {
     margin-top: 10px;
 }
 
-/* ── FRASE ── */
-
-.frase-index {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.frase-index blockquote {
-    font-size: 1.3rem;
-    font-weight: 700;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
 /* ── DEFINICION ── */
 
 .definicion {
@@ -183,15 +168,26 @@ nav a.active {
     text-align: center;
 }
 
+.definicion h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
 .definicion h3 {
     background-color: var(--beige-caja);
     padding: 20px;
     border-radius: var(--radius);
-    margin-top: 20px;
     color: var(--rojo);
     font-size: 2rem;
     font-weight: 900;
     text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.definicion p {
+    margin-top: 15px;
+    font-size: 1rem;
 }
 
 /* ── NEWSLETTER ── */
@@ -202,6 +198,11 @@ nav a.active {
     padding: 70px 20px;
     text-align: center;
     color: white;
+}
+
+.newsletter h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .newsletter form {
@@ -246,8 +247,8 @@ footer h3 {
 footer address {
     font-style: normal;
     font-size: 0.9rem;
-    margin: 10px 0;
     line-height: 1.8;
+    margin: 10px 0;
 }
 
 footer hr {
@@ -260,4 +261,112 @@ footer nav ul {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    font-size: 1
+    font-size: 11px;
+    margin: 20px 0;
+}
+
+footer nav a {
+    color: white;
+    font-size: 11px;
+}
+
+footer > div > a:first-child {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* ── TABLET (600px+) ── */
+
+@media (min-width: 600px) {
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 130px;
+    }
+
+    .intro-fotos {
+        grid-template-rows: 200px 200px;
+    }
+
+    .destinos ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .newsletter form {
+        flex-direction: row;
+        max-width: 500px;
+        margin: 20px auto 0;
+    }
+
+    .newsletter input {
+        flex: 1;
+    }
+}
+
+/* ── DESKTOP (1024px+) ── */
+
+@media (min-width: 1024px) {
+
+    header img {
+        height: 50px;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .titulo-principal {
+        height: 85vh;
+    }
+
+    .titulo-principal span {
+        font-size: 40px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 160px;
+    }
+
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        padding: 60px 20px;
+    }
+
+    .intro-fotos {
+        grid-template-rows: 200px 200px;
+        margin-top: 0;
+    }
+
+    .destinos ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .destinos {
+        padding: 40px 20px;
+    }
+
+    .definicion h3 {
+        font-size: 2.8rem;
+    }
+
+    .newsletter form {
+        max-width: 600px;
+    }
+}
